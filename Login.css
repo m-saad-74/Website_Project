@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Padding 
+Adds inner spacing around text or other content.
+
+Makes elements look less cramped.
+
+Increases the clickable area of buttons or link 
+*/
+
+
+#Footer
+{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: aqua;
+    color: black;
+    padding: 2px; /*spaces  on all side*/
+}   
+
+
+
+.upper_text
+{
+    display: flex;
+    justify-content: center ;
+}
+
+
+
+/* Mid stuff below */
+
+
+.mid_text
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid_text p
+{
+    margin: 10px ;
+}
+
+
+
+
+
+
+/* All the content related to low below */
+
+
+.lower_text ul{
+    justify-content: center;
+    display:  flex; 
+}
+.lower_text ul a{
+    margin: 10px;
+    color: black;
+    text-decoration: none;
+    /* above line is to just prevent any decoration of the text */
+    font-size: 1em;
+    opacity: 1;
+}
+
+.lower_text ul a:hover{
+    color: white;
+    opacity: 1;
+}
+
+
+
+/* All the contents related to image below */
+.image_block
+{
+    
+    display: flex ;
+    justify-content: center;
+}
+
+.image_block a{
+    background-color: aqua;
+   margin: 10px;
+   padding: 10px;
+   border-radius: 20px; 
+}
+
+
+/* 1em = the parent’s font size
+
+2em = twice the parent’s font size
+ */
+.image_block a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.image_block a :hover{
+    transition: 0.2s;
+    color: lightcyan;
+}
+
