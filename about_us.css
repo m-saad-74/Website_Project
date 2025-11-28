@@ -1,0 +1,41 @@
+.aboutus_block  
+{
+    background: linear-gradient(180deg, #8B8787 , #8B8787);
+}
+
+.headerblock
+{
+    font-style: italic;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uppertextblock , .midtextblock
+{    
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image_block
+{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.Images
+{
+    display: flex;
+    
+}
+.Images img{
+    margin-left: 10px;
+    margin-right: 60px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50px;
+}
