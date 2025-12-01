@@ -1,0 +1,242 @@
+  <!-- Font Awesome icons (for header icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #ffffff;
+      padding: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* =============== HEADER ================= */
+
+    .top-header {
+      display: flex;
+      background: #ffffff;
+      padding: 10px 20px 0 20px;
+    }
+
+    .top-left,
+    .top-center,
+    .top-right {
+      padding: 0 10px;
+    }
+
+    .top-left {
+      flex: 2;
+    }
+
+    .top-center {
+      flex: 1.2;
+    }
+
+    .top-right {
+      flex: 1.5;
+      display: flex;
+      align-items: stretch;
+    }
+
+    /* Search bar */
+    .search-box {
+      background: #333;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .search-box input {
+      flex: 1;
+      border: none;
+      padding: 8px;
+      font-size: 14px;
+      background: #555;
+      color: #fff;
+    }
+
+    .search-box input::placeholder {
+      color: #ddd;
+    }
+
+    .search-box button {
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 16px;
+      padding-left: 8px;
+      cursor: pointer;
+    }
+
+    /* Icon bar */
+    .icon-bar {
+      margin-top: 10px;
+      background: #444;
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-bottom: 4px solid #bdeff2;
+      color: #fff;
+    }
+
+    .icon-bar i {
+      font-size: 18px;
+      margin-right: 18px;
+      cursor: pointer;
+    }
+
+    .icon-bar i:last-child {
+      margin-right: 0;
+    }
+
+    /* Phone finder block */
+    .phone-finder-top {
+      background: #555;
+      color: #fff;
+      padding: 12px 15px;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .phone-finder-top i {
+      margin-right: 8px;
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #e5e5e5;
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .brand-grid div {
+      padding: 18px 15px;
+      border-top: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .brand-grid div:nth-child(2n) {
+      border-right: none;
+    }
+
+    /* Right side banner */
+    .banner {
+      background: linear-gradient(135deg, #ffb347, #ff00cc);
+      display: flex;
+      width: 100%;
+    }
+
+    .banner-phone {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      color: #fff;
+    }
+
+    .banner-text {
+      flex: 1.3;
+      background: #ffffffcc;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px 20px;
+    }
+
+    .banner-text span:first-child {
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: #00a0d1;
+      text-transform: uppercase;
+    }
+
+    .banner-text span:last-child {
+      font-size: 48px;
+      font-weight: 700;
+      color: #0c2840;
+      line-height: 1;
+    }
+
+    /* ================= NAV BAR ================= */
+
+    .main-nav {
+      background: #d8d8d8;
+      border-top: 1px solid #bbb;
+      border-bottom: 1px solid #bbb;
+      margin-top: 5px;
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 25px;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .main-nav li {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #444;
+      padding: 4px 6px;
+    }
+
+    .main-nav a:hover {
+      border-bottom: 2px solid #333;
+    }
+
+    .nav-new-badge {
+      background: #333;
+      color: #fff;
+      font-size: 9px;
+      padding: 2px 4px;
+      margin-left: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .top-header {
+        flex-direction: column;
+      }
+
+      .top-right,
+      .top-center,
+      .top-left {
+        padding: 5px 0;
+      }
+
+      .main-nav ul {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: flex-start;
+      }
+    }
+
+    </style>

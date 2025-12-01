@@ -2,12 +2,205 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="specifications.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body> 
+     <!-- ================= HEADER ================= --> 
+  <header>
+    <div class="top-header">
+      <!-- LEFT AREA: SEARCH + ICONS -->
+      <div class="top-left">
+        <div class="search-box">
+          <input type="text" placeholder="Search" />
+          <button><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="icon-bar">
+          <i class="fa-regular fa-lightbulb"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-solid fa-rss"></i>
+          <i class="fa-solid fa-car-side"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <i class="fa-solid fa-user-plus"></i>
+        </div>
+      </div>
+
+      <!-- CENTER: PHONE FINDER + BRANDS -->
+      <div class="top-center">
+        <div class="phone-finder-top">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span>Phone Finder</span>
+        </div>
+        <div class="brand-grid">
+          <div>Samsung</div>
+          <div>Xiaomi</div>
+          <div>Apple</div>
+          <div>Google</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: BANNER / LOGO -->
+      <div class="top-right">
+        <div class="banner">
+          <div class="banner-phone">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div class="banner-text">
+            <span>Mobile Shop</span>
+            <span>ONE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Featured</a></li>
+        <li><a href="#">Phone Finder</a></li>
+        <li><a href="#">Deals</a></li>
+        <li>
+          <a href="#">Merch <span class="nav-new-badge">NEW</span></a>
+        </li>
+        <li><a href="#">Coverage</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+     <br><br><br>
+     <hr>
+     <div class="main_container">
+           
+      <!-- The Upper Two Blocks firsst  -->
+       <!-- Flex it  -->
+       <div class="upper_half">
+
+        <div id="free_space">
+        </div>
+        <div class="image_block">
+          <img src="samsung.jpg" height="500px" width="" alt="">
+        </div>
+        <div class="mobile_details_block">
+          <!-- in the mpbile details block i have to add some more divs for the text -->
+           <div class="details_upper_text">
+            Samsung - Refurbished Excellent 
+            Galaxy S24 Ultra 512GB (Unlocked) 
+            Titanium Black 
+            <br>
+            <pre>Model: SM-S928UZKFXAA 
+SKU: 11078877
+            </pre>
+           </div>
+           <div class="mid_text">
+              <img src="5_star.png" alt="" height=" 100px" , width="150px">
+              <p style="font-size: 20px;">4.7 (16809 reviews from Samsung US)</p>
+           </div>
+           <div class="quantity_selector">
+              <div class="drop_box">
+              <label for="quantity" style="font-size: 20px;">Quantity:   </label>
+
+              <select name="quantity" id="quantity" style="margin-left: 10px; width: 100px;">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+               </select>
+              </div>
+               <br>
+                <button onclick="add_to_cart()" id="add_to_cart" style="margin-left: 100px;">Add to Cart </button>
+                <button onclick="saved()" id="save_" , style="margin-left: 50px;">Save</button>
+           </div>
+        </div>
+       </div>
+
+
+      <!-- Second Half -->
+       <div class="second_half">
+        <div class="Specifications">
+          <h1>Specifications</h1>
+          <ul>
+            <li><b>Screen Size</b>  : 6.8 inches </li>
+            <br>
+            <li><b>Rear-Facing Camera</b> : 200 megapixels    </li>
+            <br>
+            <li><b>Built-in Storage</b> : 512 gigabytes</li>
+            <br>
+            <li><b>Processor Model</b> : Snapdragon 8 Gen 3 for Galaxy</li>
+            <br>
+            <li><b>Phone Memory (RAM)</b> : 12 gigabytes</li>
+            <br>
+            <li><b>Model Number </b>: SM-S928UZKFXAA</li>
+            <br>
+            <li><b>Color</b> : Titanium Black</li>
+          </ul>
+        </div>
+        <div class="Description">
+          <h1>Description</h1>
+          <pre style="font-size: 18px;">The  Samsung Galaxy S24 is  a series of high-end Android-based 
+smartphones  developed, manufactured, and marketed 
+by Samsung Electronics as part of  its flagship Galaxy S series. 
+They collectively serve as the successors to the Galaxy S23 
+series. The first phones were announced on January 17, 2024, 
+at the Galaxy Unpacked event in San Jose, California, while, 
+alongside the Samsung Galaxy Tab  S10 series, the Galaxy S24 
+FE was unveiled at Samsung's Galaxy Unpacked  event on September 26, 
+2024</pre>
+
+
+        </div>
+       </div>
+
+
+       <div class="third_block" , style="margin-top: 10px;">
+        <h2>Check our other similar products:</h2>
+          <div class="row_block">
+            <div class="chunk">
+              <div style="display: flex;">
+                <img src="chunk.jpg" alt="" width="100px" height="100px">
+                <p>Samsung - Galaxy S25 Ultra 256GB (Unlocked) - Titanium Black</p>
+              </div>
+            </div>
+            <div class="chunk">
+              <div style="display: flex;">
+                <img src="Chunk_two.jpg" alt=""  width="100px" height="100px">
+                <p>
+                  Samsung -Refurbished Excellent - Galaxy S23 Ultra 512GB (Unlocked) - Green
+                </p>
+              </div>
+            </div>
+            <div class="chunk">
+              <div style="display: flex;">
+                <img src="chunk.jpg" alt=""  width="100px" height="100px">
+                <p>Samsung - Refurbished Excellent - Galaxy S22 Ultra 5G 128GB (Unlocked) - Dark Green</p>
+              </div>
+            </div>
+
+
+          </div>
+       </div>
+     </div>
+
+
+
+
+
+
+
+
+
     <div class="footer_block">
       <footer id = "Footer">
           <div class="upper_text">
@@ -35,5 +228,19 @@
       </footer>
     
     </div>
+    <script>  
+    function add_to_cart(){
+      console.log("Added to cart") ;
+      window.alert("Added to Cart") ;
+
+    }
+    function saved(){
+      console.log("Added to wishlist") ;
+      window.alert("Added to Wishlist") ;
+
+    }
+
+
+    </script>
 </body>
 </html>
