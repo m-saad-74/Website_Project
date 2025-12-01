@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Mobile Shop Header</title>
+  <title>Mobile Shop Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Font Awesome icons (for social / cart etc.) -->
@@ -23,7 +23,12 @@
       background: #f0f0f0;
     }
 
-    /* ================= TOP HEADER ================= */
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* =============== HEADER STYLES ================= */
 
     .top-header {
       display: flex;
@@ -89,7 +94,7 @@
       display: flex;
       align-items: center;
       padding: 8px 12px;
-      border-bottom: 4px solid #bdeff2; /* turquoise strip in screenshot */
+      border-bottom: 4px solid #bdeff2;
       color: #fff;
     }
 
@@ -220,7 +225,7 @@
       margin-left: 4px;
     }
 
-    /* Responsive tweak */
+    /* Responsive tweak for header */
     @media (max-width: 900px) {
       .top-header {
         flex-direction: column;
@@ -238,108 +243,15 @@
         justify-content: flex-start;
       }
     }
-  </style>
-</head>
-<body>
 
-  <!-- ================= HEADER ================= -->
-  <header>
-    <div class="top-header">
-      <!-- LEFT AREA: SEARCH + ICONS -->
-      <div class="top-left">
-        <div class="search-box">
-          <input type="text" placeholder="Search" />
-          <button><i class="fa fa-search"></i></button>
-        </div>
+    /* =============== HOME PAGE STYLES ================= */
 
-        <div class="icon-bar">
-          <i class="fa-regular fa-lightbulb"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-solid fa-rss"></i>
-          <i class="fa-solid fa-car-side"></i>
-          <i class="fa-solid fa-cart-shopping"></i>
-          <i class="fa-solid fa-right-from-bracket"></i>
-          <i class="fa-solid fa-user-plus"></i>
-        </div>
-      </div>
-
-      <!-- CENTER: PHONE FINDER + BRANDS -->
-      <div class="top-center">
-        <div class="phone-finder-top">
-          <i class="fa-solid fa-mobile-screen"></i>
-          <span>Phone Finder</span>
-        </div>
-        <div class="brand-grid">
-          <div>Samsung</div>
-          <div>Xiaomi</div>
-          <div>Apple</div>
-          <div>Google</div>
-        </div>
-      </div>
-
-      <!-- RIGHT: BANNER / LOGO -->
-      <div class="top-right">
-        <div class="banner">
-          <div class="banner-phone">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-          </div>
-          <div class="banner-text">
-            <span>Mobile Shop</span>
-            <span>ONE</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- BOTTOM NAVIGATION -->
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="#">Featured</a></li>
-        <li><a href="#">Phone Finder</a></li>
-        <li><a href="#">Deals</a></li>
-        <li>
-          <a href="#">Merch <span class="nav-new-badge">NEW</span></a>
-        </li>
-        <li><a href="#">Coverage</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Mobile Shop Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
+    .main-content {
       background: #ffffff;
       padding: 20px;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    /* ======= TOP SECTION: POPULAR + FEATURED ======= */
+    /* TOP SECTION: POPULAR + FEATURED */
 
     .top-section {
       display: flex;
@@ -417,7 +329,7 @@
       margin-bottom: 4px;
     }
 
-    /* ======= BOTTOM SECTION ======= */
+    /* BOTTOM SECTION */
 
     .bottom-section {
       margin-top: 60px;
@@ -513,7 +425,7 @@
       margin-top: 2px;
     }
 
-    /* responsive */
+    /* responsive for home */
 
     @media (max-width: 900px) {
       .top-section,
@@ -536,117 +448,190 @@
 </head>
 <body>
 
-  <!-- ======= TOP SECTION ======= -->
-  <section class="top-section">
-
-    <!-- POPULAR -->
-    <div class="box box-popular">
-      <div class="box-header">POPULAR</div>
-      <div class="popular-list">
-
-        <div class="popular-item">
-          <img src="https://via.placeholder.com/110x150?text=Phone+1" alt="Phone 1" />
-          Motorola Moto G57 Power
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="top-header">
+      <!-- LEFT AREA: SEARCH + ICONS -->
+      <div class="top-left">
+        <div class="search-box">
+          <input type="text" placeholder="Search" />
+          <button><i class="fa fa-search"></i></button>
         </div>
 
-        <div class="popular-item">
-          <img src="https://via.placeholder.com/110x150?text=Phone+2" alt="Phone 2" />
-          Huawei Mate 70 Air
+        <div class="icon-bar">
+          <i class="fa-regular fa-lightbulb"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-solid fa-rss"></i>
+          <i class="fa-solid fa-car-side"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <i class="fa-solid fa-user-plus"></i>
         </div>
-
-        <div class="popular-item">
-          <img src="https://via.placeholder.com/110x150?text=Phone+3" alt="Phone 3" />
-          Sonim XP Pro E
-        </div>
-
-        <div class="popular-item">
-          <img src="https://via.placeholder.com/110x150?text=Phone+4" alt="Phone 4" />
-          vivo V500 Pro
-        </div>
-
-        <div class="popular-item">
-          <img src="https://via.placeholder.com/110x150?text=Phone+5" alt="Phone 5" />
-          Oppo Reno15 Pro
-        </div>
-
       </div>
-    </div>
 
-    <!-- FEATURED -->
-    <div class="box box-featured">
-      <div class="box-header">FEATURED</div>
-      <div class="featured-content">
+      <!-- CENTER: PHONE FINDER + BRANDS -->
+      <div class="top-center">
+        <div class="phone-finder-top">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span>Phone Finder</span>
+        </div>
+        <div class="brand-grid">
+          <div>Samsung</div>
+          <div>Xiaomi</div>
+          <div>Apple</div>
+          <div>Google</div>
+        </div>
+      </div>
 
-        <div class="featured-item">
-          <img src="https://via.placeholder.com/210x150?text=Galaxy+S25" alt="Galaxy S25" />
-          <div class="featured-text">
-            <div class="featured-title">
-              One UI 8.5 for the Galaxy S25 Ultra appears on Samsung's server
-            </div>
-            Samsung released the stable One UI 8 for the S25 Ultra series.
+      <!-- RIGHT: BANNER / LOGO -->
+      <div class="top-right">
+        <div class="banner">
+          <div class="banner-phone">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div class="banner-text">
+            <span>Mobile Shop</span>
+            <span>ONE</span>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="featured-item">
-          <img src="https://via.placeholder.com/210x150?text=Pixel+10" alt="Pixel 10 vs Pixel 10 Pro" />
-          <div class="featured-text">
-            <div class="featured-title">
-              Google Pixel 10 vs. Pixel 10 Pro
-            </div>
-            For another year, Google's hardware department is outing not one
-            but two Pixel flagships with refined design and cameras.
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Featured</a></li>
+        <li><a href="#">Phone Finder</a></li>
+        <li><a href="#">Deals</a></li>
+        <li>
+          <a href="#">Merch <span class="nav-new-badge">NEW</span></a>
+        </li>
+        <li><a href="#">Coverage</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ================= HOME CONTENT ================= -->
+  <main class="main-content">
+
+    <!-- ======= TOP SECTION ======= -->
+    <section class="top-section">
+
+      <!-- POPULAR -->
+      <div class="box box-popular">
+        <div class="box-header">POPULAR</div>
+        <div class="popular-list">
+
+          <div class="popular-item">
+            <img src="A 36.png" alt="Galaxy A36" />
+            Galaxy A36
           </div>
-        </div>
 
+          <div class="popular-item">
+            <img src="A 56.png" alt="Galaxy A56" />
+            Galaxy A56
+          </div>
+
+          <div class="popular-item">
+            <img src="s 24-ultra.png" alt="Galaxy S24 Ultra" />
+            Galaxy S24 Ultra
+          </div>
+
+          <div class="popular-item">
+            <img src="s25-ultra.png" alt="Galaxy S25 Ultra" />
+            Galaxy S25 Ultra
+          </div>
+
+          <div class="popular-item">
+            <img src="z flip.png" alt="Galaxy Z Flip" />
+            Galaxy Z Flip
+          </div>
+
+        </div>
       </div>
-    </div>
 
-  </section>
+      <!-- FEATURED -->
+      <div class="box box-featured">
+        <div class="box-header">FEATURED</div>
+        <div class="featured-content">
 
-  <!-- ======= BOTTOM SECTION ======= -->
-  <section class="bottom-section">
+          <div class="featured-item">
+            <img src="s25-ultra.png" alt="Galaxy S25 Ultra" />
+            <div class="featured-text">
+              <div class="featured-title">
+                One UI 8.5 for the Galaxy S25 Ultra appears on Samsung's server
+              </div>
+              Samsung released the stable One UI 8 for the S25 Ultra series.
+            </div>
+          </div>
 
-    <!-- LEFT CONTROL COLUMN -->
-    <div class="left-controls">
-      <div class="auth-buttons">
-        <button class="btn-outline">Sign in</button>
-        <button class="btn-dark">Register</button>
+          <div class="featured-item">
+            <img src="pixel 10.png" alt="Pixel 10 vs Pixel 10 Pro" />
+            <div class="featured-text">
+              <div class="featured-title">
+                Google Pixel 10 vs. Pixel 10 Pro
+              </div>
+              For another year, Google's hardware department is outing not one
+              but two Pixel flagships with refined design and cameras.
+            </div>
+          </div>
+
+        </div>
       </div>
 
-      <button class="cta cta-subscribe">SUBSCRIBE</button>
-      <button class="cta cta-buy">BUY NOW</button>
-      <button class="cta cta-register">REGISTER NOW</button>
-    </div>
+    </section>
 
-    <!-- PRODUCTS ROW -->
-    <div class="products">
-      <div class="product-row">
+    <!-- ======= BOTTOM SECTION ======= -->
+    <section class="bottom-section">
 
-        <div class="product-card">
-          <img src="https://via.placeholder.com/150x170?text=Z+Fold" alt="Galaxy Z Fold" />
-          <div class="product-name">Galaxy Z Fold</div>
-          <div class="product-price">600000</div>
-          <div class="product-rate">Rate 4.5</div>
+      <!-- LEFT CONTROL COLUMN -->
+      <div class="left-controls">
+        <div class="auth-buttons">
+          <button class="btn-outline">Sign in</button>
+          <button class="btn-dark">Register</button>
         </div>
 
-        <div class="product-card">
-          <img src="https://via.placeholder.com/150x170?text=S25E" alt="Galaxy S25E" />
-          <div class="product-name">Galaxy S 25E</div>
-          <div class="product-price">450000</div>
-          <div class="product-rate">Rate 4.3</div>
-        </div>
-
-        <div class="product-card">
-          <img src="https://via.placeholder.com/150x170?text=S24+Ultra" alt="Galaxy S24 Ultra" />
-          <div class="product-name">Galaxy S24 Ultra</div>
-          <div class="product-price">350000</div>
-          <div class="product-rate">Rate 4.7</div>
-        </div>
-
+        <button class="cta cta-subscribe">SUBSCRIBE</button>
+        <button class="cta cta-buy">BUY NOW</button>
+        <button class="cta cta-register">REGISTER NOW</button>
       </div>
-    </div>
 
-  </section>
+      <!-- PRODUCTS ROW -->
+      <div class="products">
+        <div class="product-row">
+
+          <div class="product-card">
+            <img src="z flip.png" alt="Galaxy Z Flip" />
+            <div class="product-name">Galaxy Z Flip</div>
+            <div class="product-price">650000</div>
+            <div class="product-rate">Rate 4.7</div>
+          </div>
+
+          <div class="product-card">
+            <img src="A 36.png" alt="Galaxy A36" />
+            <div class="product-name">Galaxy A36</div>
+            <div class="product-price">75000</div>
+            <div class="product-rate">Rate 4.1</div>
+          </div>
+
+          <div class="product-card">
+            <img src="one plus.png" alt="OnePlus" />
+            <div class="product-name">OnePlus</div>
+            <div class="product-price">420000</div>
+            <div class="product-rate">Rate 4.5</div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </main>
 
 </body>
 </html>

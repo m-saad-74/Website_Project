@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -44,7 +44,8 @@
     .product-grid {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      /* columns auto adjust, no big empty area */
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       border: 1px solid #000;
     }
 
@@ -56,16 +57,25 @@
       font-size: 14px;
     }
 
+    /* IMAGES: no cropping, full phone visible */
     .product-card img {
-      width: 120px;
-      height: 150px;
-      object-fit: cover;
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
       margin-bottom: 10px;
       border: 1px solid #ddd;
+      background: #ffffff;
     }
 
     .product-name {
       font-weight: bold;
+    }
+
+    /* STAR RATING */
+    .rating {
+      margin-top: 4px;
+      font-size: 16px;
+      color: #f1c40f; /* golden stars */
     }
 
     /* OPTIONS BUTTON */
@@ -87,14 +97,6 @@
       gap: 10px;
       cursor: pointer;
     }
-
-    @media(max-width: 900px){
-      .product-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media(max-width: 600px){
-      .product-grid { grid-template-columns: repeat(1, 1fr); }
-    }
   </style>
 </head>
 <body>
@@ -108,68 +110,60 @@
   <!-- PRODUCT GRID -->
   <div class="product-grid">
 
-    <!-- PRODUCT 1 -->
+    <!-- PRODUCT 1: Galaxy A36 -->
     <div class="product-card">
-      <img src="https://via.placeholder.com/150x180?text=Galaxy+Z+Fold" alt="phone">
-      <div class="product-name">Galaxy Z Fold</div>
-      <div>600000</div>
-      <div>Rate 4.5</div>
-    </div>
-
-    <!-- PRODUCT 2 -->
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150x180?text=Galaxy+S25E" alt="phone">
-      <div class="product-name">Galaxy S 25E</div>
-      <div>450000</div>
-      <div>Rate 4.3</div>
-    </div>
-
-    <!-- PRODUCT 3 -->
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150x180?text=Galaxy+A36" alt="phone">
+      <img src="A 36.png" alt="Galaxy A36">
       <div class="product-name">Galaxy A36</div>
       <div>75000</div>
-      <div>Rate 4.1</div>
+      <div class="rating">★★★★☆</div>
     </div>
 
-    <!-- PRODUCT 4 -->
+    <!-- PRODUCT 2: Galaxy A56 -->
     <div class="product-card">
-      <img src="https://via.placeholder.com/150x180?text=Galaxy+A56" alt="phone">
+      <img src="A 56.png" alt="Galaxy A56">
       <div class="product-name">Galaxy A56</div>
       <div>105000</div>
-      <div>Rate 4.2</div>
+      <div class="rating">★★★★☆</div>
     </div>
 
-    <!-- PRODUCT 5 -->
+    <!-- PRODUCT 3: Galaxy S24 Ultra -->
     <div class="product-card">
-      <img src="https://via.placeholder.com/150x180?text=Galaxy+Flip" alt="phone">
-      <div class="product-name">Galaxy Z FLIP</div>
-      <div>650000</div>
-      <div>Rate 4.7</div>
-    </div>
-
-    <!-- PRODUCT 6 -->
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150x180?text=Galaxy+S25+Ultra" alt="phone">
-      <div class="product-name">Galaxy S25 Ultra</div>
-      <div>550000</div>
-      <div>Rate 4.8</div>
-    </div>
-
-    <!-- PRODUCT 7 -->
-    <div class="product-card">
-      <img src="https://via.placeholder.com/150x180?text=Galaxy+S24+Ultra" alt="phone">
+      <img src="s 24-ultra.png" alt="Galaxy S24 Ultra">
       <div class="product-name">Galaxy S24 Ultra</div>
       <div>350000</div>
-      <div>Rate 4.7</div>
+      <div class="rating">★★★★☆</div>
     </div>
 
-    <!-- PRODUCT 8 -->
+    <!-- PRODUCT 4: Galaxy S25 Ultra -->
     <div class="product-card">
-      <img src="https://via.placeholder.com/150x180?text=Galaxy+S25" alt="phone">
-      <div class="product-name">Galaxy S 25</div>
-      <div>450000</div>
-      <div>Rate 4.8</div>
+      <img src="s25-ultra.png" alt="Galaxy S25 Ultra">
+      <div class="product-name">Galaxy S25 Ultra</div>
+      <div>550000</div>
+      <div class="rating">★★★★☆</div>
+    </div>
+
+    <!-- PRODUCT 5: Galaxy Z Flip -->
+    <div class="product-card">
+      <img src="z flip.png" alt="Galaxy Z Flip">
+      <div class="product-name">Galaxy Z Flip</div>
+      <div>650000</div>
+      <div class="rating">★★★★☆</div>
+    </div>
+
+    <!-- PRODUCT 6: Pixel 10 -->
+    <div class="product-card">
+      <img src="pixel 10.png" alt="Pixel 10">
+      <div class="product-name">Pixel 10</div>
+      <div>400000</div>
+      <div class="rating">★★★★☆</div>
+    </div>
+
+    <!-- PRODUCT 7: OnePlus -->
+    <div class="product-card">
+      <img src="one plus.png" alt="OnePlus">
+      <div class="product-name">OnePlus</div>
+      <div>420000</div>
+      <div class="rating">★★★★☆</div>
     </div>
 
   </div>
