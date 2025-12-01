@@ -5,7 +5,7 @@
   <title>Mobile Shop Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Font Awesome icons (for social / cart etc.) -->
+  <!-- Font Awesome icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -20,7 +20,7 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #f0f0f0;
+      background: #ffffff;
     }
 
     img {
@@ -28,7 +28,7 @@
       display: block;
     }
 
-    /* =============== HEADER STYLES ================= */
+    /* =============== HEADER ================= */
 
     .top-header {
       display: flex;
@@ -145,7 +145,7 @@
       border-right: none;
     }
 
-    /* Right side banner (logo area) */
+    /* Right side banner */
     .banner {
       background: linear-gradient(135deg, #ffb347, #ff00cc);
       display: flex;
@@ -184,7 +184,7 @@
       line-height: 1;
     }
 
-    /* ================= BOTTOM NAV BAR ================= */
+    /* ================= NAV BAR ================= */
 
     .main-nav {
       background: #d8d8d8;
@@ -198,6 +198,8 @@
       display: flex;
       justify-content: space-between;
       padding: 10px 25px;
+      max-width: 1050px;
+      margin: 0 auto;
     }
 
     .main-nav li {
@@ -225,7 +227,6 @@
       margin-left: 4px;
     }
 
-    /* Responsive tweak for header */
     @media (max-width: 900px) {
       .top-header {
         flex-direction: column;
@@ -244,19 +245,20 @@
       }
     }
 
-    /* =============== HOME PAGE STYLES ================= */
+    /* =============== PAGE WRAPPER ================= */
 
     .main-content {
-      background: #ffffff;
-      padding: 20px;
+      max-width: 1050px;
+      margin: 15px auto 40px auto;
+      padding: 0 20px 20px 20px;
     }
 
     /* TOP SECTION: POPULAR + FEATURED */
 
     .top-section {
       display: flex;
-      gap: 40px;
       align-items: flex-start;
+      gap: 40px;
     }
 
     .box {
@@ -275,7 +277,7 @@
     }
 
     .box-popular {
-      width: 270px;
+      flex: 0 0 260px;
     }
 
     .box-popular .box-header {
@@ -285,12 +287,17 @@
     .popular-list {
       padding: 10px;
       display: flex;
+      flex-direction: column;
       gap: 8px;
-      overflow-x: auto;
+    }
+
+    .popular-row {
+      display: flex;
+      gap: 8px;
     }
 
     .popular-item {
-      width: 110px;
+      width: 80px;
       font-size: 11px;
       text-align: left;
     }
@@ -305,7 +312,7 @@
     }
 
     .box-featured .box-header {
-      background: #f0625f;
+      background: #ff7d7d;
       color: #fff;
     }
 
@@ -317,6 +324,14 @@
       display: flex;
       gap: 15px;
       margin-bottom: 18px;
+      align-items: center;
+    }
+
+    /* Featured images half size */
+    .featured-item img {
+      width: 180px;
+      height: auto;
+      border: 1px solid #ddd;
     }
 
     .featured-text {
@@ -338,10 +353,8 @@
       align-items: flex-start;
     }
 
-    /* left column: sign/register + big buttons */
-
     .left-controls {
-      width: 220px;
+      flex: 0 0 200px;
     }
 
     .auth-buttons {
@@ -352,7 +365,7 @@
 
     .btn-outline,
     .btn-dark {
-      padding: 8px 18px;
+      padding: 8px 24px;
       border-radius: 20px;
       font-size: 14px;
       cursor: pointer;
@@ -390,8 +403,6 @@
       background: #ffcb63;
     }
 
-    /* right side: product row */
-
     .products {
       flex: 1;
     }
@@ -399,11 +410,11 @@
     .product-row {
       display: flex;
       gap: 40px;
-      align-items: flex-start;
+      justify-content: flex-start;
     }
 
     .product-card {
-      width: 160px;
+      width: 170px;
       text-align: left;
       font-size: 13px;
     }
@@ -425,23 +436,24 @@
       margin-top: 2px;
     }
 
-    /* responsive for home */
-
     @media (max-width: 900px) {
       .top-section,
-      .bottom-section,
-      .product-row {
+      .bottom-section {
         flex-direction: column;
       }
 
       .box-popular,
       .left-controls {
+        flex: 1 1 auto;
         width: 100%;
       }
 
+      .product-row {
+        flex-wrap: wrap;
+      }
+
       .product-card {
-        width: 100%;
-        max-width: 200px;
+        width: 45%;
       }
     }
   </style>
@@ -526,33 +538,36 @@
       <!-- POPULAR -->
       <div class="box box-popular">
         <div class="box-header">POPULAR</div>
+
         <div class="popular-list">
+          <div class="popular-row">
+            <div class="popular-item">
+              <img src="A 36.png" alt="Motorola Moto G57 Power">
+              Motorola Moto G57 Power
+            </div>
 
-          <div class="popular-item">
-            <img src="A 36.png" alt="Galaxy A36" />
-            Galaxy A36
+            <div class="popular-item">
+              <img src="A 56.png" alt="Huawei Mate 70 Air">
+              Huawei Mate 70 Air
+            </div>
+
+            <div class="popular-item">
+              <img src="sonim xp pro e.png" alt="Sonim XP Pro E">
+              Sonim XP Pro E
+            </div>
           </div>
 
-          <div class="popular-item">
-            <img src="A 56.png" alt="Galaxy A56" />
-            Galaxy A56
-          </div>
+          <div class="popular-row">
+            <div class="popular-item">
+              <img src="z flip.png" alt="vivo Y500 Pro">
+              vivo Y500 Pro
+            </div>
 
-          <div class="popular-item">
-            <img src="s 24-ultra.png" alt="Galaxy S24 Ultra" />
-            Galaxy S24 Ultra
+            <div class="popular-item">
+              <img src="s25-ultra.png" alt="Oppo Reno15 Pro">
+              Oppo Reno15 Pro
+            </div>
           </div>
-
-          <div class="popular-item">
-            <img src="s25-ultra.png" alt="Galaxy S25 Ultra" />
-            Galaxy S25 Ultra
-          </div>
-
-          <div class="popular-item">
-            <img src="z flip.png" alt="Galaxy Z Flip" />
-            Galaxy Z Flip
-          </div>
-
         </div>
       </div>
 
@@ -609,22 +624,22 @@
           <div class="product-card">
             <img src="z flip.png" alt="Galaxy Z Flip" />
             <div class="product-name">Galaxy Z Flip</div>
-            <div class="product-price">650000</div>
-            <div class="product-rate">Rate 4.7</div>
-          </div>
-
-          <div class="product-card">
-            <img src="A 36.png" alt="Galaxy A36" />
-            <div class="product-name">Galaxy A36</div>
-            <div class="product-price">75000</div>
-            <div class="product-rate">Rate 4.1</div>
-          </div>
-
-          <div class="product-card">
-            <img src="one plus.png" alt="OnePlus" />
-            <div class="product-name">OnePlus</div>
-            <div class="product-price">420000</div>
+            <div class="product-price">600000</div>
             <div class="product-rate">Rate 4.5</div>
+          </div>
+
+          <div class="product-card">
+            <img src="s25-ultra.png" alt="Galaxy S25 Ultra" />
+            <div class="product-name">Galaxy S25 Ultra</div>
+            <div class="product-price">450000</div>
+            <div class="product-rate">Rate 4.3</div>
+          </div>
+
+          <div class="product-card">
+            <img src="s 24-ultra.png" alt="Galaxy S24 Ultra" />
+            <div class="product-name">Galaxy S24 Ultra</div>
+            <div class="product-price">350000</div>
+            <div class="product-rate">Rate 4.7</div>
           </div>
 
         </div>

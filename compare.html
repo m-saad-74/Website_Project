@@ -1,11 +1,11 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Product Page</title>
+  <title>Galaxy S25 Ultra vs Google Pixel 10 Pro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Font Awesome icons (for header icons) -->
+  <!-- Font Awesome icons (header icons ke liye) -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -20,8 +20,7 @@
     }
 
     body {
-      background: #ffffff;
-      padding: 20px;
+      background: #f3f5ff;
     }
 
     img {
@@ -246,91 +245,141 @@
       }
     }
 
-    /* ============== PRODUCT PAGE STYLES ================= */
+    /* ============ COMPARE PAGE STYLES ============ */
 
-    /* TOP BAR (PRODUCTS / FILTER) */
-    .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 30px 0 30px 0; /* thora gap header se */
+    .compare-container {
+      max-width: 1050px;
+      margin: 25px auto 40px auto;
+      padding: 20px;
     }
 
-    .btn-products {
-      padding: 10px 30px;
-      border-radius: 20px;
-      border: 1px solid #aaa;
-      background: #f3f3f3;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .filter-icon {
-      font-size: 26px;
-      cursor: pointer;
-    }
-
-    /* PRODUCT GRID */
-    .product-grid {
-      width: 100%;
-      display: grid;
-      /* FIXED 3 COLUMNS => 2 ROWS WITH 6 ITEMS */
-      grid-template-columns: repeat(3, 1fr);
-      border: 1px solid #000;
-    }
-
-    .product-card {
-      padding: 10px;
-      border-right: 1px solid #000;
-      border-bottom: 1px solid #000;
+    h1 {
       text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sub-title {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    /* top 2-card layout */
+    .phone-wrapper {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .phone-card {
+      border: 1px solid #ccd4ff;
+      border-radius: 20px;
+      padding: 24px 22px 20px;
+      width: 280px;
+      text-align: center;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .phone-card img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 12px;
+      border-radius: 12px;
+      border: 1px solid #dde3ff;
+    }
+
+    .phone-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .phone-tagline {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .price-rating {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #0057ff;
+    }
+
+    /* comparison table wrapper */
+    .compare-table-wrapper {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border: 1px solid #d0d7ff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
       font-size: 14px;
     }
 
-    .product-card:nth-child(3),
-    .product-card:nth-child(6) {
-      border-right: none; /* 3rd & 6th column right border remove */
-    }
-
-    /* IMAGES: no cropping, full phone visible */
-    .product-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: contain;
-      margin-bottom: 10px;
-      border: 1px solid #ddd;
-      background: #ffffff;
-    }
-
-    .product-name {
+    thead th {
+      background: #304ffe;
+      color: #fff;
       font-weight: bold;
+      padding: 12px 10px;
+      text-align: center;
     }
 
-    /* STAR RATING */
-    .rating {
-      margin-top: 4px;
-      font-size: 16px;
-      color: #f1c40f; /* golden stars */
+    tbody td {
+      border-bottom: 1px solid #e1e4ff;
+      padding: 10px 12px;
     }
 
-    /* OPTIONS BUTTON */
-    .options-btn {
-      margin-top: 25px;
-      display: flex;
-      justify-content: flex-end;
+    tbody tr:nth-child(even) td {
+      background: #f7f8ff;
     }
 
-    .btn-options {
-      padding: 10px 25px;
-      border-radius: 25px;
-      background: #6842ff;
-      color: white;
-      border: none;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
+    td.property {
+      text-align: left;
+      font-weight: 600;
+      width: 30%;
+      background: #f0f2ff;
+    }
+
+    td.phone-col {
+      text-align: center;
+    }
+
+    /* verdict box */
+    .verdict {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 15px 18px;
+      border-radius: 10px;
+      background: #e8f4ff;
+      border: 1px solid #c2ddff;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 700px) {
+      .phone-card {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      td.property {
+        font-size: 13px;
+      }
     }
   </style>
 </head>
@@ -405,71 +454,106 @@
     </nav>
   </header>
 
-  <!-- ==== PRODUCT PAGE CONTENT (tumhara purana code) ==== -->
+  <!-- ============ COMPARE PAGE CONTENT ============ -->
+  <main class="compare-container">
 
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <button class="btn-products">PRODUCTS</button>
-    <div class="filter-icon">&#128269;</div>
-  </div>
+    <h1>Compare Phones</h1>
+    <p class="sub-title">Galaxy S25 Ultra vs Google Pixel 10 Pro</p>
 
-  <!-- PRODUCT GRID -->
-  <div class="product-grid">
+    <!-- TOP CARDS -->
+    <div class="phone-wrapper">
 
-    <!-- PRODUCT 1: Galaxy A36 -->
-    <div class="product-card">
-      <img src="A 36.png" alt="Galaxy A36">
-      <div class="product-name">Galaxy A36</div>
-      <div>75000</div>
-      <div class="rating">★★★★☆</div>
+      <!-- LEFT: S25 Ultra -->
+      <div class="phone-card">
+        <img src="s25-ultra.png" alt="Galaxy S25 Ultra">
+        <div class="phone-name">Galaxy S25 Ultra</div>
+        <div class="phone-tagline">Best for power users &amp; S-Pen lovers</div>
+        <div class="price-rating">
+          Price: <span class="highlight">550000</span>
+        </div>
+        <div class="price-rating">
+          Rating: <span class="highlight">4.8 / 5</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Pixel -->
+      <div class="phone-card">
+        <img src="pixel 10.png" alt="Google Pixel 10 Pro">
+        <div class="phone-name">Google Pixel 10 Pro</div>
+        <div class="phone-tagline">Best for clean Android &amp; camera AI</div>
+        <div class="price-rating">
+          Price: <span class="highlight">520000</span>
+        </div>
+        <div class="price-rating">
+          Rating: <span class="highlight">4.7 / 5</span>
+        </div>
+      </div>
+
     </div>
 
-    <!-- PRODUCT 2: Galaxy A56 -->
-    <div class="product-card">
-      <img src="A 56.png" alt="Galaxy A56">
-      <div class="product-name">Galaxy A56</div>
-      <div>105000</div>
-      <div class="rating">★★★★☆</div>
+    <!-- COMPARISON TABLE -->
+    <div class="compare-table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Galaxy S25 Ultra</th>
+            <th>Google Pixel 10 Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="property">Display</td>
+            <td class="phone-col">6.8&quot; AMOLED, 144 Hz, QHD+</td>
+            <td class="phone-col">6.7&quot; OLED, 120 Hz, QHD+</td>
+          </tr>
+          <tr>
+            <td class="property">Processor</td>
+            <td class="phone-col">Snapdragon 8 Elite (custom)</td>
+            <td class="phone-col">Tensor G5</td>
+          </tr>
+          <tr>
+            <td class="property">RAM / Storage</td>
+            <td class="phone-col">12 / 16 GB, 256–1 TB</td>
+            <td class="phone-col">12 GB, 256 / 512 GB</td>
+          </tr>
+          <tr>
+            <td class="property">Main Camera</td>
+            <td class="phone-col">200 MP + 50 MP periscope + 12 MP ultra-wide</td>
+            <td class="phone-col">50 MP main + 48 MP telephoto + 12 MP ultra-wide</td>
+          </tr>
+          <tr>
+            <td class="property">Front Camera</td>
+            <td class="phone-col">12 MP</td>
+            <td class="phone-col">12 MP</td>
+          </tr>
+          <tr>
+            <td class="property">Battery</td>
+            <td class="phone-col">5,500 mAh, 60 W fast charging</td>
+            <td class="phone-col">5,000 mAh, 45 W fast charging</td>
+          </tr>
+          <tr>
+            <td class="property">OS</td>
+            <td class="phone-col">One UI 8 (Android 16)</td>
+            <td class="phone-col">Stock Android 16, 7 years updates</td>
+          </tr>
+          <tr>
+            <td class="property">Special Features</td>
+            <td class="phone-col">S-Pen, DeX mode, 100x zoom</td>
+            <td class="phone-col">AI photos, Call screening, Pixel features</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- PRODUCT 3: Galaxy S24 Ultra -->
-    <div class="product-card">
-      <img src="s 24-ultra.png" alt="Galaxy S24 Ultra">
-      <div class="product-name">Galaxy S24 Ultra</div>
-      <div>350000</div>
-      <div class="rating">★★★★☆</div>
+    <!-- VERDICT / NOTE -->
+    <div class="verdict">
+      <strong>Quick Verdict:</strong><br>
+      • Galaxy S25 Ultra is far better for users who are professional and productive.<br>
+      • Google Pixel 10 Pro is for users who like clean Android with better camera along with Google latest updates.
     </div>
 
-    <!-- PRODUCT 4: Galaxy S25 Ultra -->
-    <div class="product-card">
-      <img src="s25-ultra.png" alt="Galaxy S25 Ultra">
-      <div class="product-name">Galaxy S25 Ultra</div>
-      <div>550000</div>
-      <div class="rating">★★★★☆</div>
-    </div>
-
-    <!-- PRODUCT 5: Galaxy Z Flip -->
-    <div class="product-card">
-      <img src="z flip.png" alt="Galaxy Z Flip">
-      <div class="product-name">Galaxy Z Flip</div>
-      <div>650000</div>
-      <div class="rating">★★★★☆</div>
-    </div>
-
-    <!-- PRODUCT 6: Pixel 10 -->
-    <div class="product-card">
-      <img src="pixel 10.png" alt="Pixel 10">
-      <div class="product-name">Pixel 10</div>
-      <div>400000</div>
-      <div class="rating">★★★★☆</div>
-    </div>
-
-  </div>
-
-  <!-- OPTIONS BUTTON -->
-  <div class="options-btn">
-    <button class="btn-options">⚙ OPTIONS</button>
-  </div>
+  </main>
 
 </body>
 </html>
