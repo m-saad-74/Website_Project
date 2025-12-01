@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="footer.css">
   <meta charset="UTF-8">
-  <title>Quick Links & FAQ</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Font Awesome icons (header ke icons ke liye) -->
   <link
@@ -17,12 +17,12 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #e9edf5;          /* light grey-blue */
-      color: #1f2933;
+      background: #bfbfbf;   /* grey background */
+      padding: 20px;
     }
 
     img {
@@ -30,12 +30,13 @@
       display: block;
     }
 
-    /* =============== HEADER ================= */
+    /* ================= HEADER CSS ================= */
 
     .top-header {
       display: flex;
       background: #ffffff;
       padding: 10px 20px 0 20px;
+      margin-bottom: 10px;
     }
 
     .top-left,
@@ -186,13 +187,12 @@
       line-height: 1;
     }
 
-    /* ================= NAV BAR ================= */
-
+    /* NAV BAR */
     .main-nav {
       background: #d8d8d8;
       border-top: 1px solid #bbb;
       border-bottom: 1px solid #bbb;
-      margin-top: 5px;
+      margin-bottom: 20px; /* header ke neeche thori space */
     }
 
     .main-nav ul {
@@ -247,228 +247,249 @@
       }
     }
 
-    /* =============== FAQ PAGE STYLES ================= */
+    /* ================= CHECKOUT PAGE CSS ================= */
 
-    .wrapper {
-      max-width: 1050px;
-      margin: 40px auto;
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 28px 30px 40px;
-      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.12);
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      gap: 25px;
     }
 
-    /* TOP "QUICK LINKS" HEADER -------------------------- */
-    .top-bar {
+    /* LEFT COLUMN */
+    .left-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .panel {
+      background: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      overflow: hidden;
+    }
+
+    .card-header-bar {
       display: flex;
       align-items: center;
+      padding: 10px 18px;
+      background: linear-gradient(90deg, #222, #284dcf);
+      color: #fff;
       font-weight: bold;
       font-size: 20px;
-      margin-bottom: 25px;
-      color: #111827;
     }
 
-    .top-bar span.icon {
+    .cart-icon {
       font-size: 22px;
-      margin-left: 8px;
+      margin-right: 12px;
     }
 
-    /* OVAL MENU ----------------------------------------- */
-    .menu-row {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      margin-bottom: 35px;
-      flex-wrap: wrap;
+    .card-body {
+      padding: 18px;
     }
 
-    .menu-pill {
-      padding: 10px 28px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #e0f2fe, #d1fae5);
-      border: 1px solid #93c5fd;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      color: #0f172a;
-      transition: all 0.2s ease;
+    .field-group {
+      margin-bottom: 12px;
     }
 
-    .menu-pill:hover {
-      background: linear-gradient(135deg, #bfdbfe, #6ee7b7);
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
-      transform: translateY(-1px);
-    }
-
-    /* MAIN MIDDLE SECTION ------------------------------- */
-    .middle {
-      display: flex;
-      gap: 40px;
-      margin-bottom: 40px;
-      align-items: flex-start;
-    }
-
-    /* CONTACT US LEFT ----------------------------------- */
-    .contact-box {
-      flex: 1;
-      background: #f9fafb;
-      border-radius: 10px;
-      padding: 18px 20px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .contact-title {
-      display: inline-block;
-      padding: 6px 16px;
-      font-weight: bold;
-      margin-bottom: 15px;
-      border-radius: 999px;
-      background: #e0f2fe;
-      color: #1d4ed8;
-      font-size: 13px;
-      letter-spacing: 0.5px;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 280px;
-      font-size: 13px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      border-radius: 6px;
-      border: 1px solid #d1d5db;
-      background: #ffffff;
-      padding: 8px 10px;
-      font-size: 13px;
-      outline: none;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: #2563eb;
-      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
-    }
-
-    .contact-form textarea {
-      height: 110px;
-      resize: none;
-    }
-
-    .btn-submit {
-      margin-top: 10px;
-      align-self: flex-start;
-      padding: 7px 26px;
-      border-radius: 999px;
+    .input-box {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 4px;
       border: none;
-      background: #2563eb;
-      color: #ffffff;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 13px;
-      letter-spacing: 0.4px;
-      transition: background 0.2s ease, transform 0.2s ease,
-                  box-shadow 0.2s ease;
-    }
-
-    .btn-submit:hover {
-      background: #1d4ed8;
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
-      transform: translateY(-1px);
-    }
-
-    /* FAQ RIGHT ----------------------------------------- */
-    .faq-box {
-      flex: 1.6;
-      background: #f9fafb;
-      border-radius: 10px;
-      padding: 18px 22px 22px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .faq-title {
-      display: inline-block;
-      padding: 6px 18px;
-      font-weight: bold;
-      margin-bottom: 18px;
-      border-radius: 999px;
-      background: #e0f2fe;
-      color: #1d4ed8;
-      font-size: 13px;
-      letter-spacing: 0.5px;
-    }
-
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      font-size: 13px;
-    }
-
-    .faq-item {
       background: #ffffff;
-      padding: 10px 14px;
-      border-radius: 8px;
-      position: relative;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 2px 4px rgba(15, 23, 42, 0.04);
+      box-shadow: inset 0 0 0 1px #d0d0d0;
+      font-size: 14px;
     }
 
-    .faq-item .question {
-      font-weight: 600;
-      color: #111827;
-      padding-right: 22px;
+    .input-row {
+      display: flex;
+      gap: 10px;
     }
 
-    .faq-item .toggle {
-      position: absolute;
-      right: 10px;
-      top: 8px;
-      font-size: 16px;
-      color: #9ca3af;
+    .save-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 14px 0;
     }
 
-    .faq-item .answer {
-      margin-top: 6px;
-      font-weight: normal;
+    .toggle {
+      width: 48px;
+      height: 22px;
+      border-radius: 20px;
+      background: #e0e0e0;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .toggle-circle {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #24b541;
+    }
+
+    .btn-pay {
+      width: 100%;
+      padding: 10px 0;
+      border-radius: 20px;
+      border: none;
+      background: linear-gradient(90deg, #1e1ef0, #2b47ff);
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .other-methods-text {
+      margin-top: 8px;
+      text-align: center;
       font-size: 12px;
-      color: #4b5563;
-      line-height: 1.5;
+      color: #777;
     }
 
-    /* BOTTOM SUPPORT CARDS ------------------------------ */
-    .support-row {
+    .pay-logos {
+      margin-top: 8px;
       display: flex;
       justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
+      gap: 16px;
     }
 
-    .support-card {
-      width: 30%;
-      min-width: 210px;
-      background: linear-gradient(135deg, #e0f2fe, #fef9c3);
-      padding: 15px 18px;
-      font-size: 12px;
-      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+    .pay-logo-box {
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 0 0 0 1px #ccc;
+      font-size: 13px;
+    }
+
+    /* ADDRESS PANEL */
+    .address-header {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 10px 0;
+      background: #f4f4f4;
+    }
+
+    .address-body {
+      padding: 18px;
+    }
+
+    .phone-post-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .small-placeholder {
+      font-size: 11px;
+      color: #666;
+      margin-bottom: 3px;
+    }
+
+    /* RIGHT COLUMN */
+    .right-column {
+      flex: 1;
+    }
+
+    .order-panel {
+      background: #f4f4f4;
       border-radius: 10px;
-      border: 1px solid #bfdbfe;
-      color: #111827;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      padding: 20px;
     }
 
-    .support-card h4 {
+    .order-title {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .order-separator {
+      height: 2px;
+      background: #555;
+      margin: 10px 0 20px;
+    }
+
+    .order-item {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    /* FIXED IMAGE FRAME */
+    .order-product-img {
+      width: 90px;
+      height: 130px;
+      border-radius: 8px;
+      border: 1px solid #999;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .order-product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .order-product-name {
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .order-product-line {
       font-size: 14px;
-      margin-bottom: 6px;
-      font-style: italic;
-      color: #1d4ed8;
     }
 
-    @media (max-width: 800px) {
-      .middle {
+    .order-lines {
+      margin-top: 12px;
+      font-size: 16px;
+    }
+
+    .order-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .order-row.total {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .discount span:last-child {
+      color: #c0392b;
+    }
+
+    .btn-checkout {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      border-radius: 26px;
+      border: none;
+      background: #e53935;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.35);
+    }
+
+    @media (max-width: 900px) {
+      .page-wrapper {
         flex-direction: column;
       }
     }
@@ -479,7 +500,7 @@
   <!-- ================= HEADER ================= -->
   <header>
     <div class="top-header">
-      <!-- LEFT AREA: SEARCH + ICONS -->
+      <!-- LEFT AREA -->
       <div class="top-left">
         <div class="search-box">
           <input type="text" placeholder="Search" />
@@ -498,7 +519,7 @@
         </div>
       </div>
 
-      <!-- CENTER: PHONE FINDER + BRANDS -->
+      <!-- CENTER -->
       <div class="top-center">
         <div class="phone-finder-top">
           <i class="fa-solid fa-mobile-screen"></i>
@@ -512,7 +533,7 @@
         </div>
       </div>
 
-      <!-- RIGHT: BANNER / LOGO -->
+      <!-- RIGHT -->
       <div class="top-right">
         <div class="banner">
           <div class="banner-phone">
@@ -526,7 +547,7 @@
       </div>
     </div>
 
-    <!-- BOTTOM NAVIGATION -->
+    <!-- NAV -->
     <nav class="main-nav">
       <ul>
         <li><a href="#">Home</a></li>
@@ -536,98 +557,102 @@
         <li><a href="#">Featured</a></li>
         <li><a href="#">Phone Finder</a></li>
         <li><a href="#">Deals</a></li>
-        <li>
-          <a href="#">Merch <span class="nav-new-badge">NEW</span></a>
-        </li>
+        <li><a href="#">Merch <span class="nav-new-badge">NEW</span></a></li>
         <li><a href="#">Coverage</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- =============== FAQ PAGE CONTENT ================= -->
+  <!-- ================= CHECKOUT CONTENT ================= -->
+  <div class="page-wrapper">
 
-  <div class="wrapper">
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
 
-    <!-- TOP LABEL --------------------------------------- -->
-    <div class="top-bar">
-      <span>QUICK LINKS</span>
-      <span class="icon">🔗</span>
-    </div>
+      <!-- CARD DETAILS -->
+      <div class="panel">
+        <div class="card-header-bar">
+          <span class="cart-icon">🛒</span> Card Details
+        </div>
 
-    <!-- OVAL MENU --------------------------------------- -->
-    <div class="menu-row">
-      <div class="menu-pill">ABOUT US</div>
-      <div class="menu-pill">FAQs</div>
-      <div class="menu-pill">PRIVACY POLICY</div>
-      <div class="menu-pill">RETURNS</div>
-    </div>
-
-    <!-- MIDDLE SECTION ---------------------------------- -->
-    <div class="middle">
-
-      <!-- CONTACT US -->
-      <div class="contact-box">
-        <div class="contact-title">CONTACT US</div>
-
-        <form class="contact-form">
-          <input type="text" placeholder="Full Name">
-          <input type="email" placeholder="Email">
-          <textarea placeholder="Comments"></textarea>
-          <button type="submit" class="btn-submit">Submit</button>
-        </form>
-      </div>
-
-      <!-- FAQ -->
-      <div class="faq-box">
-        <div class="faq-title">Frequently Asked Questions</div>
-
-        <div class="faq-list">
-
-          <div class="faq-item">
-            <div class="question">
-              1. What brands of mobile phones do you sell?
-            </div>
-            <div class="toggle">⌃</div>
+        <div class="card-body">
+          <div class="field-group">
+            <input class="input-box" type="text" placeholder="Card Number">
           </div>
 
-          <div class="faq-item">
-            <div class="question">
-              2. What payment methods do you accept?
-            </div>
-            <div class="toggle">⌃</div>
+          <div class="input-row">
+            <input class="input-box" type="text" placeholder="MM/YY">
+            <input class="input-box" type="text" placeholder="CVV">
           </div>
 
-          <div class="faq-item">
-            <div class="question">
-              3. Do you charge extra for shipping?
-            </div>
-            <div class="answer">
-              A. Delivery within the city is free for orders above ₦50,000 (or $100).
-              For smaller orders, a small delivery fee applies.
-            </div>
-            <div class="toggle">⌄</div>
+          <div class="save-row">
+            <div class="toggle"><div class="toggle-circle"></div></div>
+            <span>Save for future</span>
           </div>
 
+          <button class="btn-pay">Pay</button>
+
+          <div class="other-methods-text">Other payment methods</div>
+
+          <div class="pay-logos">
+            <div class="pay-logo-box">VISA</div>
+            <div class="pay-logo-box">PayPal</div>
+            <div class="pay-logo-box">G Pay</div>
+          </div>
         </div>
       </div>
+
+      <!-- ADDRESS -->
+      <div class="panel">
+        <div class="address-header">Address</div>
+
+        <div class="address-body">
+          <div class="field-group">
+            <input class="input-box" type="text" placeholder="Enter your Address">
+          </div>
+
+          <div class="phone-post-row">
+            <div style="flex:1;">
+              <div class="small-placeholder">Phone No</div>
+              <input class="input-box" type="text" placeholder="051-XXXXXXXX">
+            </div>
+            <div style="flex:1;">
+              <div class="small-placeholder">Postal No</div>
+              <input class="input-box" type="text" placeholder="0XX-XX">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- BOTTOM SUPPORT CARDS ---------------------------- -->
-    <div class="support-row">
-      <div class="support-card">
-        <h4>Chat Support</h4>
-        <p>Get assistance and find solutions for any issues or questions you have.</p>
-      </div>
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+      <div class="order-panel">
+        <div class="order-title">Order Details</div>
+        <div class="order-separator"></div>
 
-      <div class="support-card">
-        <h4>Email Support</h4>
-        <p>Contact our team directly via email for personalized support or inquiries.</p>
-      </div>
+        <div class="order-item">
+          <div class="order-product-img">
+            <img src="s 24-ultra.png" alt="Samsung Galaxy S24 Ultra">
+          </div>
 
-      <div class="support-card">
-        <h4>Help Center</h4>
-        <p>Browse guides, FAQs, and resources to quickly resolve common problems.</p>
+          <div>
+            <div class="order-product-name">Samsung Galaxy S24 Ultra</div>
+            <div class="order-product-line">Qty : 1 &nbsp;&nbsp; Price : 444.99$</div>
+          </div>
+        </div>
+
+        <div class="order-lines">
+          <div class="order-row"><span>Shipping :</span><span>10.0$</span></div>
+          <div class="order-row"><span>Tax :</span><span>5.0$</span></div>
+          <div class="order-row"><span>Subtotal :</span><span>459.99$</span></div>
+          <div class="order-row discount"><span>Discount :</span><span>-100.0$</span></div>
+          <div class="order-row total"><span>Total :</span><span>359.99$</span></div>
+        </div>
+
+        <button class="btn-checkout">Proceed to Checkout</button>
       </div>
     </div>
 
